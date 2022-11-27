@@ -1,0 +1,24 @@
+Currently connected to 0 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  24
+Successfull in finding some peers
+Currently connected to 0 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  124
+Successfull in finding some peers
+Currently connected to 1 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  122
+Successfull in finding some peers
+Currently connected to 1 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  202
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  156
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  191
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  175
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rezon ]
+TOTAL CONNECTIONS :  151
+Successfull in finding some peers
