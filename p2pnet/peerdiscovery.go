@@ -21,7 +21,7 @@ func DiscoverPeers(ctx context.Context, host host.Host, service string, kad_dht 
 	fmt.Println("Successfull in advertising service")
 	connectedPeers := []peer.AddrInfo{}
 	isAlreadyConnected := false
-	for len(connectedPeers) < 5 {
+	for len(connectedPeers) < 20 {
 		fmt.Fprintln(constat, "Currently connected to", len(connectedPeers), "out of 5 [for service", service, "]")
 		fmt.Fprintln(constat, "TOTAL CONNECTIONS : ", len(host.Network().Conns()))
 		peerChannel, err := routingDiscovery.FindPeers(ctx, service)

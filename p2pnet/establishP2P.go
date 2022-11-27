@@ -9,7 +9,9 @@ import (
 )
 
 func EstablishP2P() (context.Context, host.Host) {
-	host, err := libp2p.New(libp2p.ListenAddrStrings("/ip4/0.0.0.0/tcp/0"))
+	identity := libp2p.Identity(GenerateKey())
+	nat := libp2p.NATPortMap()
+	host, err := libp2p.New(libp2p.ListenAddrStrings("/ip4/0.0.0.0/tcp/0"), identity, nat)
 	if err != nil {
 		fmt.Println("Error while creating a new node")
 	} else {

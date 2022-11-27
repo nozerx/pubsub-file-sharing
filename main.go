@@ -5,7 +5,7 @@ import (
 	str "pubsubfilesharing/stream"
 )
 
-const service string = "fshr/p2p/rezon"
+const service string = "fshr/p2p/rex/trial"
 const topic string = "rex/filegroup/group1"
 
 func main() {
