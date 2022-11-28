@@ -10,15 +10,14 @@ var filename string = "log/peerconnlog"
 func OpenPeerConnectionLog() *os.File {
 	i := 0
 	for {
-		_, err := os.Stat(filename + ".txt")
+		_, err := os.Stat(filename + fmt.Sprintf("%d", i) + ".txt")
 		if err != nil {
 			break
 		} else {
-			filename = fmt.Sprintf("%s_%d", filename[:len(filename)-2], i)
+			i++
 		}
-		i++
 	}
-	file, err := os.Create(filename + ".txt")
+	file, err := os.Create(filename + fmt.Sprintf("%d", i) + ".txt")
 	if err != nil {
 		fmt.Println("Error while opening the file", filename)
 	}
