@@ -1,6 +1,7 @@
 package main
 
 import (
+	flg "pubsubfilesharing/flags"
 	pnet "pubsubfilesharing/p2pnet"
 	str "pubsubfilesharing/stream"
 )
@@ -13,5 +14,6 @@ func main() {
 	kad_dht := pnet.HandleDHT(ctx, host)
 	sub, top := pnet.HandlePubSub(ctx, host, topic)
 	go pnet.DiscoverPeers(ctx, host, service, kad_dht)
+	flg.ResolveAll(ctx, host, top)
 	str.HandlePubSubMessages(ctx, host, sub, top)
 }

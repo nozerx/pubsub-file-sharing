@@ -12,14 +12,14 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 
-type chatmessage struct {
+type Chatmessage struct {
 	Messagecontent string
 	Messagefrom    peer.ID
 	Authorname     string
 }
 
-func composeMessage(msg string, host host.Host) *chatmessage {
-	return &chatmessage{
+func composeMessage(msg string, host host.Host) *Chatmessage {
+	return &Chatmessage{
 		Messagecontent: msg,
 		Messagefrom:    host.ID(),
 		Authorname:     host.ID().Pretty()[len(host.ID().Pretty())-6 : len(host.ID().Pretty())],
@@ -27,7 +27,7 @@ func composeMessage(msg string, host host.Host) *chatmessage {
 }
 
 func readFromSubscription(ctx context.Context, sub *pubsub.Subscription) {
-	chatmsg := &chatmessage{}
+	chatmsg := &Chatmessage{}
 	for {
 		messg, err := sub.Next(ctx)
 		if err != nil {
