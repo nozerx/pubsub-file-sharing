@@ -13,7 +13,7 @@ import (
 func sendToStream(str network.Stream) {
 	fmt.Println("Sending file to ", str.Conn().RemotePeer())
 	file, err := os.Open("go.sum")
-	sendBytes := make([]byte, 100)
+	sendBytes := make([]byte, getByteSize())
 	if err != nil {
 		fmt.Println("Error while opening the sending file")
 	} else {
@@ -48,10 +48,14 @@ func sendToStream(str network.Stream) {
 
 }
 
+func getByteSize() int {
+	return 100254
+}
+
 func ReceivedFromStream(str network.Stream, logfile *os.File) {
 	file, err := os.Create("Recieved.txt")
 	fmt.Fprintln(logfile, "Recieving file from stream to :", str.Conn().RemotePeer())
-	readBytes := make([]byte, 100)
+	readBytes := make([]byte, 1)
 	if err != nil {
 		fmt.Fprintln(logfile, "Error while creating the recieving file")
 	} else {
