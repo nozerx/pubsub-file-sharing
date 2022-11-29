@@ -6,11 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"pubsubfilesharing/fileshare"
+	"time"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/peer"
+	"github.com/libp2p/go-libp2p/core/protocol"
 )
+
+var pid string = "/pid/file/share"
+var IsBroadcaster bool = false
+var isAlreadyRequested bool = false
 
 type Chatmessage struct {
 	Messagecontent string
@@ -79,13 +86,19 @@ func handleInputFromSubscription(ctx context.Context, host host.Host, sub *pubsu
 				fmt.Println("Error while unmarshaling the inputMsg from subscription")
 			} else {
 				if string(inputPacket.Type) == "brd" {
-					brdpacket := &BroadcastMsg{}
-					err := json.Unmarshal(inputPacket.InnerContent, brdpacket)
-					if err != nil {
-						fmt.Println("Error while unmarshalling brd packet")
-					} else {
-						fmt.Println("Mentor >", brdpacket.MentorNode)
-						broadCastReply(ctx, host, topic, *brdpacket)
+					if !IsBroadcaster {
+						brdpacket := &BroadcastMsg{}
+						err := json.Unmarshal(inputPacket.InnerContent, brdpacket)
+						if err != nil {
+							fmt.Println("Error while unmarshalling brd packet")
+						} else {
+							fmt.Println("Mentor >", brdpacket.MentorNode)
+							broadCastReply(ctx, host, topic, *brdpacket)
+							if !isAlreadyRequested {
+								isAlreadyRequested = true
+								go requestFile(ctx, host, brdpacket.MentorNode, protocol.ID(pid))
+							}
+						}
 					}
 				} else if string(inputPacket.Type) == "msg" {
 					chatMsg := &Chatmessage{}
@@ -107,6 +120,16 @@ func handleInputFromSubscription(ctx context.Context, host host.Host, sub *pubsu
 			}
 		}
 	}
+}
+
+func requestFile(ctx context.Context, host host.Host, mentr peer.ID, proto protocol.ID) {
+	file := fileshare.OpenFileStatusLog()
+	time.Sleep(30 * time.Second)
+	stream, err := host.NewStream(ctx, mentr, proto)
+	if err != nil {
+		fmt.Fprintln(file, "Error while handling file request stream")
+	}
+	ReceivedFromStream(stream, file)
 }
 
 func writeToSubscription(ctx context.Context, host host.Host, pubSubTopic *pubsub.Topic) {

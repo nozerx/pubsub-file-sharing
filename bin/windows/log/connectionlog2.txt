@@ -1,15 +1,15 @@
 Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
-TOTAL CONNECTIONS :  20
+TOTAL CONNECTIONS :  16
 Successfull in finding some peers
-Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
-TOTAL CONNECTIONS :  65
+Currently connected to 1 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  66
 Successfull in finding some peers
-Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
-TOTAL CONNECTIONS :  89
+Currently connected to 1 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  119
 Successfull in finding some peers
-Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
-TOTAL CONNECTIONS :  97
+Currently connected to 1 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  121
 Successfull in finding some peers
-Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
-TOTAL CONNECTIONS :  108
+Currently connected to 1 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  137
 Successfull in finding some peers
