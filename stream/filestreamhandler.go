@@ -22,14 +22,6 @@ func sendToStream(str network.Stream) {
 			_, err = file.Read(sendBytes)
 			if err == io.EOF {
 				fmt.Println("Send the file completely")
-				count := 0
-				for {
-					bufstr.Write([]byte("jfkda"))
-					count++
-					if count > 200 {
-						break
-					}
-				}
 				break
 			}
 			if err != nil {
@@ -40,8 +32,6 @@ func sendToStream(str network.Stream) {
 				fmt.Println("Error while sending to the stream")
 			}
 		}
-		fmt.Println("Outside the loop")
-		time.Sleep(60 * time.Second)
 		fmt.Println("Closing the stream")
 		str.Close()
 	}
@@ -70,12 +60,9 @@ func ReceivedFromStream(str network.Stream, logfile *os.File) {
 				fmt.Fprintln(logfile, "Error while reading from stream")
 				break
 			}
-			fmt.Print("\nline\n" + string(readBytes))
 			_, err = file.Write(readBytes)
 			if err != nil {
 				fmt.Fprintln(logfile, "Error while writing to the stream")
-			} else {
-				fmt.Println("Writing to the file")
 			}
 
 		}
