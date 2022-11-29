@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"pubsubfilesharing/stream"
+
 	"time"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
@@ -12,18 +13,24 @@ import (
 )
 
 func BroadCastMentorDetails(ctx context.Context, host host.Host, topic *pubsub.Topic) {
-	broadcastmsg := stream.Chatmessage{
-		Messagecontent: host.ID().String(),
-		Messagefrom:    host.ID(),
-		Authorname:     host.ID().Pretty()[len(host.ID().Pretty())-6 : len(host.ID().Pretty())],
+	broadcastmsg := stream.BroadcastMsg{
+		MentorNode: host.ID(),
 	}
 	boradcastbytes, err := json.Marshal(broadcastmsg)
 	if err != nil {
 		fmt.Println("Error while marshalling the broadcast message")
 	}
+	packetMsg := stream.Packet{
+		Type:         "brd",
+		InnerContent: boradcastbytes,
+	}
+	packetBytes, err := json.Marshal(packetMsg)
+	if err != nil {
+		fmt.Println("Error while marshalling the broadcast message")
+	}
 	for {
-		time.Sleep(5 * time.Second)
-		err = topic.Publish(ctx, boradcastbytes)
+		time.Sleep(30 * time.Second)
+		err = topic.Publish(ctx, packetBytes)
 		if err != nil {
 			fmt.Println("Error while publishing the broadcast message")
 		}

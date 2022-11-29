@@ -18,6 +18,21 @@ type Chatmessage struct {
 	Authorname     string
 }
 
+type BroadcastMsg struct {
+	MentorNode peer.ID
+}
+
+type Packet struct {
+	Type         string
+	InnerContent []byte
+}
+
+type BroadcastRely struct {
+	To     peer.ID
+	From   peer.ID
+	status string
+}
+
 func composeMessage(msg string, host host.Host) *Chatmessage {
 	return &Chatmessage{
 		Messagecontent: msg,
@@ -26,22 +41,72 @@ func composeMessage(msg string, host host.Host) *Chatmessage {
 	}
 }
 
-func readFromSubscription(ctx context.Context, sub *pubsub.Subscription) {
-	chatmsg := &Chatmessage{}
+func broadCastReply(ctx context.Context, host host.Host, topic *pubsub.Topic, brdpacket BroadcastMsg) {
+	mentorPeerId := brdpacket.MentorNode
+	replyPacket := BroadcastRely{
+		To:     mentorPeerId,
+		From:   host.ID(),
+		status: "ready",
+	}
+	rplypacketbytes, err := json.Marshal(replyPacket)
+	if err != nil {
+		fmt.Println("Error while marhsalling the brd rply packet")
+	} else {
+		packet := Packet{
+			Type:         "rpl",
+			InnerContent: rplypacketbytes,
+		}
+
+		packetByte, err := json.Marshal(packet)
+		if err != nil {
+			fmt.Println("Error while marshalling rplypacket")
+		} else {
+			topic.Publish(ctx, packetByte)
+		}
+	}
+}
+
+func handleInputFromSubscription(ctx context.Context, host host.Host, sub *pubsub.Subscription, topic *pubsub.Topic) {
+	inputPacket := &Packet{}
 	for {
-		messg, err := sub.Next(ctx)
+		inputMsg, err := sub.Next(ctx)
+
 		if err != nil {
 			fmt.Println("Error while getting message from subscription")
 		} else {
-			err := json.Unmarshal(messg.Data, chatmsg)
+			err := json.Unmarshal(inputMsg.Data, inputPacket)
 			if err != nil {
-				fmt.Println("Error while unmarshalling")
+				fmt.Println("Error while unmarshaling the inputMsg from subscription")
 			} else {
-				fmt.Println(messg.ReceivedFrom.Pretty()[len(messg.ReceivedFrom.Pretty())-6:len(messg.ReceivedFrom.Pretty())], "[", chatmsg.Authorname, "]", ">", string(chatmsg.Messagecontent))
+				if string(inputPacket.Type) == "brd" {
+					brdpacket := &BroadcastMsg{}
+					err := json.Unmarshal(inputPacket.InnerContent, brdpacket)
+					if err != nil {
+						fmt.Println("Error while unmarshalling brd packet")
+					} else {
+						fmt.Println("Mentor >", brdpacket.MentorNode)
+						broadCastReply(ctx, host, topic, *brdpacket)
+					}
+				} else if string(inputPacket.Type) == "msg" {
+					chatMsg := &Chatmessage{}
+					err := json.Unmarshal(inputPacket.InnerContent, chatMsg)
+					if err != nil {
+						fmt.Println("Error while unmarshalling msg packet")
+					} else {
+						fmt.Println("[", "BY >", inputMsg.ReceivedFrom.Pretty()[len(inputMsg.ReceivedFrom.Pretty())-6:len(inputMsg.ReceivedFrom.Pretty())], "FRM >", chatMsg.Authorname, "]", chatMsg.Messagecontent[:len(chatMsg.Messagecontent)-1])
+					}
+				} else if string(inputPacket.Type) == "rpl" {
+					rplpacket := &BroadcastRely{}
+					err := json.Unmarshal(inputPacket.InnerContent, rplpacket)
+					if err != nil {
+						fmt.Println("Error while unmarshalling rpl packet")
+					} else {
+						fmt.Println("broadcast reply [", rplpacket.To, "]", "[", rplpacket.From, "]", "[", rplpacket.status, "]")
+					}
+				}
 			}
 		}
 	}
-
 }
 
 func writeToSubscription(ctx context.Context, host host.Host, pubSubTopic *pubsub.Topic) {
@@ -51,17 +116,26 @@ func writeToSubscription(ctx context.Context, host host.Host, pubSubTopic *pubsu
 		if err != nil {
 			fmt.Println("Error while reading from standard input")
 		} else {
-			chatmsg, err := json.Marshal(*composeMessage(messg, host))
+			chatMsg := composeMessage(messg, host)
+			inputCnt, err := json.Marshal(*chatMsg)
 			if err != nil {
-				fmt.Println("Error while marshalling")
+				fmt.Println("Error while marshaling the chat message")
+			}
+
+			pktMsg, err := json.Marshal(Packet{
+				Type:         "msg",
+				InnerContent: inputCnt,
+			})
+			if err != nil {
+				fmt.Println("Error while marshalling the paket")
 			} else {
-				pubSubTopic.Publish(ctx, chatmsg)
+				pubSubTopic.Publish(ctx, pktMsg)
 			}
 		}
 	}
 }
 
 func HandlePubSubMessages(ctx context.Context, host host.Host, sub *pubsub.Subscription, top *pubsub.Topic) {
-	go readFromSubscription(ctx, sub)
+	go handleInputFromSubscription(ctx, host, sub, top)
 	writeToSubscription(ctx, host, top)
 }

@@ -15,7 +15,6 @@ func ResolveAll(ctx context.Context, host host.Host, top *pubsub.Topic) {
 
 	if *mode == 1 {
 		go msgpass.BroadCastMentorDetails(ctx, host, top)
-
 	}
 
 }

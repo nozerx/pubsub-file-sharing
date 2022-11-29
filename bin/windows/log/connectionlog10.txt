@@ -1,0 +1,321 @@
+Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  20
+Successfull in finding some peers
+Currently connected to 0 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  106
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  132
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  153
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  162
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  177
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  135
+Successfull in finding some peers
+Currently connected to 2 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  165
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  158
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  133
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  137
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  132
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  122
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  118
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  113
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  112
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  114
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  111
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  107
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  108
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  107
+Successfull in finding some peers
+Currently connected to 3 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  106
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  131
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  128
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  122
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  117
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  111
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  109
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  118
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  118
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  113
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  110
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  109
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  106
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  106
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  102
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  101
+Successfull in finding some peers
+Currently connected to 4 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  101
+Successfull in finding some peers
+Currently connected to 5 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  98
+Successfull in finding some peers
+Currently connected to 5 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  99
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  99
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  96
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  98
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  97
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  97
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  93
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  94
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  93
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  91
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  122
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  113
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  110
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  104
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  103
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  98
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  100
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  97
+Successfull in finding some peers
+Currently connected to 6 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  98
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  107
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  102
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  147
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  162
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  163
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  159
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  164
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  170
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  154
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  155
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  182
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  183
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  172
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  154
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  156
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  146
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  148
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  138
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  138
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  136
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  140
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  133
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  142
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  134
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  140
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  135
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  139
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  129
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  156
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  161
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  161
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  153
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  144
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  139
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  138
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  131
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  134
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  132
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  164
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  161
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  160
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  145
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  141
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  137
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  142
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  131
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  138
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  136
+Successfull in finding some peers
+Currently connected to 7 out of 5 [for service fshr/p2p/rex/trial ]
+TOTAL CONNECTIONS :  122
+Successfull in finding some peers
