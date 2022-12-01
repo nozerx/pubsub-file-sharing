@@ -1,2 +1,0 @@
-Recieving file from stream to : QmVAa4Qr7H4Svxiz259yHDVLPX9wbcvR21FxdHB9cVqrv9
-End of file reached

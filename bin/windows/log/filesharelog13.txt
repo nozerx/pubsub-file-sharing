@@ -1,3 +1,0 @@
-Recieving file from stream to : QmdQ88sycghBNQnnFrkVxYXFr4Wjwdft5hdXrt8zQhUed9
-End of file reached
-Completed reading from the stream

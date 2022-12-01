@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"pubsubfilesharing/fileshare"
+	"strings"
 	"time"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
@@ -38,6 +39,31 @@ type BroadcastRely struct {
 	To     peer.ID
 	From   peer.ID
 	status string
+}
+
+type filereceivereq struct {
+	Filename string
+	Type     string
+	From     peer.ID
+	Size     int
+}
+
+func (frq filereceivereq) newFileRecieveRequest(ctx context.Context, topic *pubsub.Topic) {
+	frqbytes, err := json.Marshal(frq)
+	if err != nil {
+		fmt.Println("Error while marshalling the file recieve request")
+	} else {
+		pktbytes, err := json.Marshal(Packet{
+			Type:         "frq",
+			InnerContent: frqbytes,
+		})
+		if err != nil {
+			fmt.Println("Error while marshalling the frq packet")
+		} else {
+			topic.Publish(ctx, pktbytes)
+		}
+	}
+
 }
 
 func composeMessage(msg string, host host.Host) *Chatmessage {
@@ -94,10 +120,7 @@ func handleInputFromSubscription(ctx context.Context, host host.Host, sub *pubsu
 						} else {
 							fmt.Println("Mentor >", brdpacket.MentorNode)
 							broadCastReply(ctx, host, topic, *brdpacket)
-							if !isAlreadyRequested {
-								isAlreadyRequested = true
-								go requestFile(ctx, host, brdpacket.MentorNode, protocol.ID(pid))
-							}
+
 						}
 					}
 				} else if string(inputPacket.Type) == "msg" {
@@ -116,20 +139,31 @@ func handleInputFromSubscription(ctx context.Context, host host.Host, sub *pubsu
 					} else {
 						fmt.Println("broadcast reply [", rplpacket.To, "]", "[", rplpacket.From, "]", "[", rplpacket.status, "]")
 					}
+				} else if string(inputPacket.Type) == "frq" {
+					filercvrq := &filereceivereq{}
+					err := json.Unmarshal(inputPacket.InnerContent, filercvrq)
+					if filercvrq.From != host.ID() {
+						fmt.Println("Recieved file recieve request")
+						if err != nil {
+							fmt.Println("Error while unmarshalling frq packet")
+						} else {
+							go requestFile(ctx, host, filercvrq.Filename, filercvrq.Type, filercvrq.Size, filercvrq.From, protocol.ID(pid))
+						}
+					}
 				}
 			}
 		}
 	}
 }
 
-func requestFile(ctx context.Context, host host.Host, mentr peer.ID, proto protocol.ID) {
+func requestFile(ctx context.Context, host host.Host, filename string, filetype string, size int, mentr peer.ID, proto protocol.ID) {
 	file := fileshare.OpenFileStatusLog()
 	time.Sleep(30 * time.Second)
 	stream, err := host.NewStream(ctx, mentr, proto)
 	if err != nil {
 		fmt.Fprintln(file, "Error while handling file request stream")
 	}
-	ReceivedFromStream(stream, file)
+	ReceivedFromStream(stream, filename, filetype, file, size)
 }
 
 func writeToSubscription(ctx context.Context, host host.Host, pubSubTopic *pubsub.Topic) {
@@ -139,6 +173,24 @@ func writeToSubscription(ctx context.Context, host host.Host, pubSubTopic *pubsu
 		if err != nil {
 			fmt.Println("Error while reading from standard input")
 		} else {
+			fmt.Println(messg[:3])
+			if messg[:3] == "<s>" {
+				filename := messg[3:]
+				fmt.Println("send file ", filename[:len(filename)-1])
+				filename_send = filename[:len(filename)-1]
+				filename_sep := strings.Split(filename[:len(filename)-1], ".")
+				size, _ := getByteSize(filename_sep[0] + "." + filename_sep[1])
+				newFrq := filereceivereq{
+					Filename: filename_sep[0],
+					Type:     filename_sep[1],
+					From:     host.ID(),
+					Size:     size,
+				}
+				newFrq.newFileRecieveRequest(ctx, pubSubTopic)
+				continue
+
+			}
+
 			chatMsg := composeMessage(messg, host)
 			inputCnt, err := json.Marshal(*chatMsg)
 			if err != nil {
